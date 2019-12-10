@@ -590,7 +590,7 @@ class S3HmacAuthV4Handler(HmacAuthV4Handler, AuthHandler):
 
     def __init__(self, *args, **kwargs):
         super(S3HmacAuthV4Handler, self).__init__(*args, **kwargs)
-
+        self.region_name = ""
         if self.region_name:
             self.region_name = self.clean_region_name(self.region_name)
 
